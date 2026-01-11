@@ -7,12 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 export default function FeedPage() {
   const { data, isLoading, isError, error, isFetching, refetch } = useQuery({
     queryKey: ['posts'],
-    queryFn: () => getPosts(),
-    // refetchOnMount: false,
-    // refetchOnWindowFocus: false,
-    // staleTime:10000,
-    // fetchInterval: 2000,
-    
+    queryFn: () => getPosts(),  // ✅ CHANGED: Added arrow function with parentheses
   });
 
   // Extract posts from the nested data structure
