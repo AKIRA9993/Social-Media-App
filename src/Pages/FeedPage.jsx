@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 export default function FeedPage() {
   const { data, isLoading, isError, error, isFetching, refetch } = useQuery({
     queryKey: ['posts'],
-    queryFn: getPosts,
+    queryFn: () => getPosts(),
     // refetchOnMount: false,
     // refetchOnWindowFocus: false,
     // staleTime:10000,
